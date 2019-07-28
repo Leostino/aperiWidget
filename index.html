@@ -3,25 +3,37 @@
 <head>
 	<meta charset="UTF-8">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<meta content="ie=edge" http-equiv="X-UA-Compatible"><!--font Awesome-->
-
-	<script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'>
-  </script>
-  <!-- added the title of the document -->
+	<meta content="ie=edge" http-equiv="X-UA-Compatible">
+	<!--Font Awesome cdn-->
+	<script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script>
+  	<!-- added the title of the document -->
 	<title>APERi</title>
 </head>
 <body>
+	<!--Wrapper-->
 	<div class="container">
+		<!--Header-->
 		<header class="header">
-			<div class="search">
-				<input id="search-txt" placeholder="Enter City Name" type="text"> <a href="#" id="search-btn"><i class="fas fa-search"></i></a>
-			</div>
+			<p>Welcome User</p>
 		</header>
-		<nav>
-			<main id="main">
+			<!--First article that showup first-->
+			<section id="nameForm">
+				<!--
+					TODO
+					input element 
+					button
+				-->
+
+			</section>
+			<!--Side bar with cuurrently weather or weaather search-->
+			<aside id="main">
+				<div class="search">
+					<input id="search-txt" placeholder="Enter City Name" type="text"> <a href="#" id="search-btn"><i class="fas fa-search"></i></a>
+				</div>
+				<!--Logo from api for weather conditions-->
 				<div class="logo"></div>
 				<div class="city-icon">
-					<div class="city-icon-holder">
+				<div class="city-icon-holder">
 					<div id="city-name"></div><img alt="" id="icon" src=""></div>
 				</div>
 				<div class="temperature">
@@ -30,14 +42,19 @@
 				<div class="humidity">
 					<div id="humidity-div"></div>
 				</div>
-			</main>
-		</nav>
-		<article id="mbtaTest"></article>
-	</div><!--jquery cdn-->
+			</aside>
+	 		<!--Bigger area-->
+	 		<article id="mbtaTest">
+	 		<!--Where mbt stuff will display-->
+	 		</article>
+	</div>
+	<!--jquery cdn-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
 	</script> 
+	<!--Weather js-->
 	<script src="assets/script/index.js">
 	</script> 
+	<!--MBTA js-->
 	<script src="assets/script/mbta.js">
 	</script>
 </body>
