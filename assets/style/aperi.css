@@ -1,0 +1,38 @@
+.logo {
+    border: 2px solid gray;
+    width:100%;
+
+}
+
+.logo p {
+    text-align: center;
+    border: 2px solid gray;
+    font-family: 'Sancreek', cursive;
+    font-size: 40px;
+    margin-top:0px;
+    width:100px;
+    margin-left: 600px;
+}
+
+ #date {
+    border: 2px solid gray;
+    width:200px;
+    font-size: 15px;
+    font-family: 'Arima Madurai', cursive;
+    margin-left: 75em;
+ }
+
+ article {
+    border: 2px solid gray;
+    width:750px;
+    height: 500px;
+    margin-left: 550px;
+ }
+
+ article h1 {
+    font-family: 'Sancreek', cursive;
+    border: 2px solid gray;
+    width:62px;
+    margin-top:0px;
+    margin-left: 345px;
+ }
