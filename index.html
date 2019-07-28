@@ -1,57 +1,56 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--font Awesome-->
-    <script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script>
-    <title>Title to be determed</title>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="ie=edge" http-equiv="X-UA-Compatible">
+  <!--font Awesome-->
+  <link href="https://fonts.googleapis.com/css?family=Faster+One|Henny+Penny|Press+Start+2P|Sancreek|UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+	<script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'>
+  </script>
+  <!-- added the title of the document -->
+	<title>APERi</title>
 </head>
 <body>
-        <body>
-
-                <div class="container">
-                <header class="header">
-                  <div class="search">
-                    <input type="text" placeholder="Enter City Name" id="search-txt">
-                    <a id="search-btn" href="#"><i class="fas fa-search"></i></a>
-                  </div>
-                </header>
-
-                <nav>
-                <main id="main">
-                  
-                  <div class="city-icon">
-                    <div class="city-icon-holder">
-                    <div id="city-name"></div>
-                    <img src="" alt="" id="icon">
-                      </div>
-                  </div>
-                  
-                  <div class="temperature">
-                    <div id="temp"></div>
-                  </div>
-                  
-                  <div class="humidity">
-                    <div id="humidity-div"></div>
-                  </div>
-                  
-                </main>
-                </nav>
-                <article id="mbtaTest">
-                  
-                </article>
-              </div>
-                
-              
-                
-                  <!--jquery cdn-->
-                  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-                  <script  src="assets/script/index.js"></script>
-                  <script src="assets/script/mbta.js"></script>
-              
-              
-              
-              </body>
-              
-        </html>
+	<div class="container">
+    <!-- created timeDate div -->
+    <div id="timeDate"></div>
+		<header class="header">
+			<div class="search">
+				<input id="search-txt" placeholder="Enter City Name" type="text"> <a href="#" id="search-btn"><i class="fas fa-search"></i></a>
+			</div>
+		</header>
+		<nav>
+			<main id="main">
+        <!-- added logo and section div -->
+      <div class="section">
+				<header class="logo">
+          <p>APERi</p>
+          <p id="date">date and time display here</p>
+        </header>
+				<div class="city-icon">
+					<div class="city-icon-holder">
+					<div id="city-name"></div><img alt="" id="icon" src=""></div>
+				</div>
+				<div class="temperature">
+					<div id="temp"></div>
+				</div>
+				<div class="humidity">
+					<div id="humidity-div"></div>
+        </div>
+        </div>
+			</main>
+		</nav>
+		<article id="mbtaTest">
+        <h1>APERi</h1>
+    </article>
+	</div><!--jquery cdn-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script> 
+	<script src="assets/script/index.js">
+	</script> 
+	<script src="assets/script/mbta.js">
+	</script>
+</body>
+</html>
