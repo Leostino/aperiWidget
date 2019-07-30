@@ -1,12 +1,25 @@
+:root{
+   --border-color: gray;
+   --primary-color-1: #2F7164;	/*Primary colors for app - Rodrigo*/
+   --primary-color-2: #7AA79E;
+   --primary-color-3: #4F8A7F;
+   --primary-color-4: #1A5C4F;
+}
+
+header{
+   background-color: var(--primary-color-1)
+}
+
 .logo {
-    border: 2px solid gray;
+    border: 2px solid var(--border-color);
     width:100%;
+    color: var(--primary-color-2);
 
 }
 
 .logo p {
     text-align: center;
-    border: 2px solid gray;
+    border: 2px solid var(--border-color);
     font-family: 'Sancreek', cursive;
     font-size: 40px;
     margin-top:0px;
@@ -15,7 +28,7 @@
 }
 
  #date {
-    border: 2px solid gray;
+    border: 2px solid var(--border-color);
     width:200px;
     font-size: 15px;
     font-family: 'Arima Madurai', cursive;
@@ -23,16 +36,36 @@
  }
 
  article {
-    border: 2px solid gray;
+    border: 2px solid var(--border-color);
     width:750px;
     height: 500px;
     margin-left: 550px;
+    margin-top: 10px;
  }
 
  article h1 {
     font-family: 'Sancreek', cursive;
-    border: 2px solid gray;
+    border: 2px solid var(--border-color);
     width:62px;
     margin-top:0px;
     margin-left: 345px;
+    
+ }
+
+/*Weather section - Rodrigo*/
+ #weather{
+   border: 2px solid var(--border-color);
+   width:250px;
+   height: auto;
+   margin-left: 150px;
+   float: left;
+   margin-top: 10px;
+ }
+
+ #city-name, #temp, #humidity-div{
+    text-align: center;
+ }
+
+ #icon{
+  margin-left: 100px;
  }
