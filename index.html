@@ -1,112 +1,151 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--font Awesome-->
-    <script src="https://kit.fontawesome.com/ba12d81664.js"></script>
-    <!--Bootstrap-->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!--CSS-->
-    
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!--font Awesome-->
+	<script src="https://kit.fontawesome.com/ba12d81664.js"></script>
+	<!--Bootstrap-->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!--CSS-->
 
-    <title>Document</title>
+
+	<title>Document</title>
 </head>
-<body class="bg-secondary">
-    <!--Wrapper-->
-    <div class="container-fluid bg-light">
-        <!--Header-->
-        <header class="row bg-primary text-light justify-content-center ">
-                <p class="display-1" id="userNameHeader">Hello user</p>
-        </header>
-            <div class="row">
-                <div class="col-md-12">
-                    <!--First -->
-                    <div class="jumbotron card card-block">
-                            <h2 class="row justify-content-center">Welcome !</h2>
-                            <h3 class="row justify-content-center">What's your name:</h3>
-                            <span class="row justify-content-center"> 
-                                <input type="text"class="input m-1"><h1 class="btn btn-success m-1 "><i class="fas fa-sign-in-alt">Enter</i></h1>
-                            </span>
-                    </div>
-                </div>
-            </div>
-            <!--weather-->
-            <div class="shadow row">
-                <div class="col-md-6">
-                    <div class="page-header bg-dark text-light">
-                        <h1>
-                            Weather <small>Current Weather</small>
-                        </h1>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-8">
-                            <input class=" mt-2 mb-2 ml-5"type="text" value="" placeholder="City name ..." id="searchTxt">
-                        </div>
-                        <div class="col-md-4">
-                            
-                                <h3 id="searchBtn" class=" btn btn-success mt-1 ml-1 "><i class="fas fa-search" > Search</i></h3>
-                        </div>
-                    </div>
-                    <div class="row mb-5 justify-content-center">
-                        <!--display-->
-                        <div class="col-md-6 ">
-                            <h3 class="ml-2" id="cityName">Cambridge</h3>
-                            <!--icon display-->
-                        <img class="ml-5" alt="" id="icon" src="" style="height: 100px; width: 100px;">
-                        </div>
-                        <div class="col-md-6">
-                            <!--display temp-->
-                            <h3 id="currentDescript">
-                                description
-                            </h3>
-                            <h3 class=" display-4" id="currentTemp">80</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="page-header bg-dark text-light">
-                        <h1>
-                            MBTA <small>Train arrival esti</small>
-                        </h1>
-                    </div>
-                    <div class="row mb-5 justify-content-center ">
-                        <div class="col-md-6 justify-content-center">
-                                <h5 class="m-2 bg-warning text-light pl-2">Orange</h5>
-                                <h5 class="m-2 bg-danger text-light pl-2">Red</h5>  
-                                <h5 class="m-2 bg-success text-light pl-2">Green</h5>
-                                
-                        </div>
-                        <div class="col-md-6 ml-auto justify-content-center">
-                                <select class="justify-content-center">
-                                        <option value="volvo">Station-1</option>
-                                        <option value="saab">Station-2</option>
-                                        <option value="opel">Station-3</option>
-                                        <option value="audi">Station-4</option>
-                                      </select>
-            
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                                <h4 class="m-2">Inbound arrival:</h4>
-                                <h5 class="m-2">arriving in 15 min</h5>
-                        </div>
-                        <div class="col-md-6">
-                                <h4 class="m-2">Inbound arrival:</h4>
-                                <h5 class="m-2">arriving in 15 min</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-<!--Jquery CDN-->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>    
-<!--weather js-->
-<script src="assets/javascript/weather.js"> </script>
-<!--MBTA-->
-<script src="assets/javascript/mbta.js"></script>
+<body class="bg-secondary">
+	<!--Wrapper-->
+	<main class="container bg-light">
+		<!--Header-->
+		<header class="row bg-primary text-light justify-content-center ">
+			<p class="display-1" id="userNameHeader">Hello user</p>
+		</header>
+		<!--First section to appear-->
+		<section class="row justify-content-center">
+			<!--Request Name-->
+			<form class="jumbotron mt-5 col-6 justify-content-center shadow p-3 mb-5  rounded">
+				<h2 class="row justify-content-center">Welcome !</h2>
+				<h3 class="row justify-content-center">What's your name:</h3>
+				<span class="row justify-content-center">
+					<input type="text" class="col-6 m-1">
+					<h1 class="col-4 btn btn-success m-1 "><i class="fas fa-sign-in-alt">Enter</i></h1>
+				</span>
+			</form>
+		</section>
+		<!--sub-wrapper-->
+		<article class="row no-gutters">
+			<!--weather widget wrapper-->
+			<aside class="col-sm-5">
+				<!--Weather -->
+				<div class="card shadow bg-white rounded ml-auto mb-3">
+					<!--Header-->
+					<h2 class="bg-info text-light text-center ">Weather</h2>
+
+					<!--input and seach btn-->
+					<div class="">
+						<input class=" mt-2 mb-2 ml-5" type="text" value="" placeholder="City name ..." id="searchTxt">
+						<h3 id="searchBtn" class=" btn btn-success mt-1 ml-1 "><i class="fas fa-search"> Search</i></h3>
+						<hr class="ml-4 mr-4">
+					</div>
+					<!--city name display-->
+					<div class="row m-4">
+						<span class="col-6 m-1 ml-4">
+							<h3 class="ml-2" id="cityName">Cambridge</h3>
+							<!--icon display-->
+							<img class="ml-3" alt="" id="icon" src="" style="height: 100px; width: 100px;">
+							<!--icon description-->
+							<h5 class="ml-2" id="currentDescript">Lorem, ipsum dolor sit amet consectetur ad</h5>
+						</span>
+						<!--temp display-->
+						<span class="col-4 justify-contents-center mr-1">
+							<h3 class="mt-5 display-4" id="currentTemp">80</h3>
+							<h5>High: 89</h5>
+							<h5>Low: 69</h5>
+						</span>
+
+					</div>
+				</div>
+				<!--End of weather wrapper-->
+			</aside>
+
+			<!--Right side widgets-->
+			<section class="col-sm-6 ml-auto mr-auto p-0  ">
+
+
+				<div class="card shadow">
+					<!--header-->
+					<h2 class="bg-info text-light text-center">MBTA</h2>
+					<!--Wrap inside the card -->
+					<di class="row pl-5">
+						<!--Trains lines-->
+						<div class="col-6 justify-content-center">
+							<h4 class="m-2">Trains Lines</h4>
+							<hr class="ml-2">
+							<h5 class="m-2 bg-warning text-light pl-2">Orange</h5>
+							<h5 class="m-2 bg-danger text-light pl-2">Red</h5>
+							<h5 class="m-2 bg-success text-light pl-2">Green</h5>
+
+
+						</div>
+						<!--Train station-->
+						<div class="co-lg-6 ml-5 no-gutters">
+							<h4 class="m-2">Stations</h4>
+							<hr class="">
+							<select>
+								<option value="volvo">Station-1</option>
+								<option value="saab">Station-2</option>
+								<option value="opel">Station-3</option>
+								<option value="audi">Station-4</option>
+							</select>
+
+						</div>
+						<div class="col">
+							<div class="col">
+								<h4 class="m-2">Inbound arrival:</h4>
+								<h5 class="m-2">arriving in 15 min</h5>
+
+							</div>
+
+						</div>
+						<div class="col-lg">
+							<div class="col">
+								<h4 class="m-2">Inbound arrival</h4>
+								<h5 class="m-2">arriving in 15 min</h5>
+
+							</div>
+
+						</div>
+
+
+					</di>
+
+
+
+				</div>
+
+
+
+
+
+
+			</section>
+
+
+
+
+		</article>
+		<footer class="row footer bg-dark mt-3">footer</footer>
+		<!--End Wraper-->
+	</main>
+
+	<!--Jquery CDN-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<!--weather js-->
+	<script src="assets/javascript/weather.js"> </script>
+	<!--MBTA-->
+	<script src="assets/javascript/mbta.js"></script>
 </body>
 
 </html>
