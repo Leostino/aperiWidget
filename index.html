@@ -1,69 +1,112 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="ie=edge" http-equiv="X-UA-Compatible">
-  <!--font Awesome-->
-  <link href="https://fonts.googleapis.com/css?family=Faster+One|Henny+Penny|Press+Start+2P|Sancreek|UnifrakturMaguntia&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style/aperi.css">
-	<meta content="ie=edge" http-equiv="X-UA-Compatible"><!--font Awesome-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--font Awesome-->
+    <script src="https://kit.fontawesome.com/ba12d81664.js"></script>
+    <!--Bootstrap-->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--CSS-->
+    
 
-	<script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'>
-  </script>
-  <!-- added the title of the document -->
-	<title>APERi</title>
+    <title>Document</title>
 </head>
-<body>
-	<div class="container">
-    <!-- created timeDate div -->
-    <div id="timeDate"></div>
-		<header class="header">
-			
-		</header>
-		<nav>
-			<main id="main">
-        <!-- added logo and section div -->
-      <div class="section">
-				<header class="logo">
-          <p>APERi</p>
-          <p id="date">date and time display here</p>
-		</header>
-			
+<body class="bg-secondary">
+    <!--Wrapper-->
+    <div class="container-fluid bg-light">
+        <!--Header-->
+        <header class="row bg-primary text-light justify-content-center ">
+                <p class="display-1" id="userNameHeader">Hello user</p>
+        </header>
+            <div class="row">
+                <div class="col-md-12">
+                    <!--First -->
+                    <div class="jumbotron card card-block">
+                            <h2 class="row justify-content-center">Welcome !</h2>
+                            <h3 class="row justify-content-center">What's your name:</h3>
+                            <span class="row justify-content-center"> 
+                                <input type="text"class="input m-1"><h1 class="btn btn-success m-1 "><i class="fas fa-sign-in-alt">Enter</i></h1>
+                            </span>
+                    </div>
+                </div>
+            </div>
+            <!--weather-->
+            <div class="shadow row">
+                <div class="col-md-6">
+                    <div class="page-header bg-dark text-light">
+                        <h1>
+                            Weather <small>Current Weather</small>
+                        </h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <input class=" mt-2 mb-2 ml-5"type="text" value="" placeholder="City name ..." id="searchTxt">
+                        </div>
+                        <div class="col-md-4">
+                            
+                                <h3 id="searchBtn" class=" btn btn-success mt-1 ml-1 "><i class="fas fa-search" > Search</i></h3>
+                        </div>
+                    </div>
+                    <div class="row mb-5 justify-content-center">
+                        <!--display-->
+                        <div class="col-md-6 ">
+                            <h3 class="ml-2" id="cityName">Cambridge</h3>
+                            <!--icon display-->
+                        <img class="ml-5" alt="" id="icon" src="" style="height: 100px; width: 100px;">
+                        </div>
+                        <div class="col-md-6">
+                            <!--display temp-->
+                            <h3 id="currentDescript">
+                                description
+                            </h3>
+                            <h3 class=" display-4" id="currentTemp">80</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="page-header bg-dark text-light">
+                        <h1>
+                            MBTA <small>Train arrival esti</small>
+                        </h1>
+                    </div>
+                    <div class="row mb-5 justify-content-center ">
+                        <div class="col-md-6 justify-content-center">
+                                <h5 class="m-2 bg-warning text-light pl-2">Orange</h5>
+                                <h5 class="m-2 bg-danger text-light pl-2">Red</h5>  
+                                <h5 class="m-2 bg-success text-light pl-2">Green</h5>
+                                
+                        </div>
+                        <div class="col-md-6 ml-auto justify-content-center">
+                                <select class="justify-content-center">
+                                        <option value="volvo">Station-1</option>
+                                        <option value="saab">Station-2</option>
+                                        <option value="opel">Station-3</option>
+                                        <option value="audi">Station-4</option>
+                                      </select>
+            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <h4 class="m-2">Inbound arrival:</h4>
+                                <h5 class="m-2">arriving in 15 min</h5>
+                        </div>
+                        <div class="col-md-6">
+                                <h4 class="m-2">Inbound arrival:</h4>
+                                <h5 class="m-2">arriving in 15 min</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-			</main>
-		</nav>
-  <!-- added weather section - Rodrigo -->
 
-		<section id="weather">
-				<div class="search">
-						<input id="search-txt" placeholder="Enter City Name" type="text"> <a href="#" id="search-btn"><i class="fas fa-search"></i></a>
-					</div>
-			<div class="city-icon">
-				<div class="city-icon-holder">
-				<p id="city-name"></p><img alt="" id="icon" src="">
-				</div>
-			</div>
-			<div class="temperature">
-				<div id="temp"></div>
-			</div>
-			<div class="humidity">
-				<div id="humidity-div"></div>
-			</div>
-		</section>
-  <!-- end of weather section - Rodrigo -->
-
-		<article id="mbtaTest">
-        <h1>APERi</h1>
-    </article>
-  
-	</div><!--jquery cdn-->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-	</script> 
-	<script src="assets/script/index.js">
-	</script> 
-	<script src="assets/script/mbta.js">
-	</script>
+<!--Jquery CDN-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>    
+<!--weather js-->
+<script src="assets/javascript/weather.js"> </script>
+<!--MBTA-->
+<script src="assets/javascript/mbta.js"></script>
 </body>
+
 </html>
