@@ -47,10 +47,13 @@ $("#orangeBtn").on('click',function(){
                 arriveTime = response.data[0].attributes.departure_time;
 
             }
-            arriveTime = arriveTime.substr(arriveTime.length - 5);
+            let rt = new Date(arriveTime);
+            //arriveTime = new Date(arriveTime);
             //display time of arrival 
+
+
             console.log(arriveTime);
-            $("#arrivingDisplay").html(arriveTime);
+            $("#arrivingDisplay").html(rt.getTime());
 
             
            
