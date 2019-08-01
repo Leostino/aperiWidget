@@ -1,49 +1,77 @@
-const appKey = "75713bc434fc1e071e9c80823f391fa7";
+console.log("hello this is the weather script");
 
-let searchButton = document.getElementById("search-btn");
-let searchInput = document.getElementById("search-txt");
-let cityName = document.getElementById("city-name");
-let icon = document.getElementById("icon");
-let temperature = document.getElementById("temp");
-let humidity = document.getElementById("humidity-div");
+// eventclick function
 
-searchButton.addEventListener("click", findWeatherDetails);
-searchInput.addEventListener("keyup", enterPressed);
+$("#search-btn").on('click',function(){
 
-function enterPressed(event) {
-  if (event.key === "Enter") {
-    findWeatherDetails();
-  }
-}
+   //assign val from inputBox to searchBox
 
-function findWeatherDetails() {
-  if (searchInput.value === "") {
-  
-  }else {
-    let searchLink = "https://api.openweathermap.org/data/2.5/weather?q=" + searchInput.value + "&units=imperial&appid="+appKey;
-   httpRequestAsync(searchLink, theResponse);
-  }
- }
+   let searchBox = $("#search-txt").val();
 
-function theResponse(response) {
-  let jsonObject = JSON.parse(response);
-  console.log(jsonObject);
-  cityName.innerHTML = jsonObject.name;
-  icon.src = "http://openweathermap.org/img/w/" + jsonObject.weather[0].icon + ".png";
-  temperature.innerHTML = parseInt(jsonObject.main.temp) + "°";
-  humidity.innerHTML = jsonObject.main.humidity + "%";
-}
-//todo httprequest
-function httpRequestAsync(url, callback)
-{
-  console.log("hello");
-    var httpRequest = new XMLHttpRequest();
-    //arrow function 
-    httpRequest.onreadystatechange = () => { 
-        if (httpRequest.readyState == 4 && httpRequest.status == 200)
-            callback(httpRequest.responseText);
-    }
-    httpRequest.open("GET", url, true); // true for asynchronous 
-    httpRequest.send();
-}
+   // assign app key
 
+   const appKey = "75713bc434fc1e071e9c80823f391fa7";
+
+   //assing Url + seach string
+
+   let queryRoutesURL ="https://api.openweathermap.org/data/2.5/weather?q="+searchBox+"&units=imperial&appid="+appKey;
+   
+   console.log("weather :"+queryRoutesURL);
+   
+   //ajax call
+   
+   $.ajax({
+   
+       url: queryRoutesURL,
+      
+       method:"GET",
+      
+       dataType: "json"
+   
+      }).done(function(response){
+   
+        //assign current seach to icon url img
+   
+        let iconUrl = "http://openweathermap.org/img/w/" + response.weather[0].icon + ".png";
+   
+        //Display City Name
+   
+        $("#cityName").html(response.name);
+   
+        //Get and display current temp
+
+       let currentTemp = Math.floor(response.main.temp);
+       
+       $("#currentTemp").html(currentTemp);
+
+       // Get and display high temp
+
+       let highTemp = Math.floor(response.main.temp_max);
+
+       $("#high-temp").html("<h5>High: " + highTemp + "</h5");
+
+       // Get and display low temp
+
+       let lowTemp = Math.floor(response.main.temp_min);
+
+       $("#low-temp").html("<h5>Low: " + lowTemp + "</h5");
+
+       //display icon
+   
+        $("#icon").attr('src',iconUrl);
+
+        // change height and width of the icon
+
+        $("#icon").css({'height': '100px', 'width': '100px'});
+   
+       //display description
+   
+       $("#currentDescript").html(response.weather[0].description);
+   
+       console.log(response);
+
+   })
+
+//end of click event
+
+})

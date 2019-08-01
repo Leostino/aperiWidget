@@ -1,4 +1,6 @@
-let name;
+
+ let name = $("#yourName").val();
+
 
 
 $(document).ready(function() {
