@@ -21,6 +21,12 @@
 		<!--Header-->
 		<header class="row bg-primary text-light justify-content-center ">
 			<p class="display-1" id="userNameHeader">Hello user</p>
+			<!-- nav -->
+			<nav class="navbar navbar-light">
+				<a class="navbar-brand" href="#">
+					<i class="fas fa-cogs"></i>
+				</a>
+			  </nav>
 		</header>
 		<!--First section to appear-->
 		<section class="row justify-content-center">
@@ -126,16 +132,34 @@
 				</div>
 
 					<!-- news -->
-					<section class="col-sm-6 ml-auto mr-auto p-0">
-						<div class="card shadow">
-						
-								<h2 class="bg-info text-light text-center">News</h2>
-								<div class="col-6 justify-content-center">
-								<h3 class="mt-5 display-4" id="news"></h3>
-							
-	</div>
-	</div>
-  })
+					<!-- search for news -->
+					<!-- form for search  -->
+								<div class="card shadow">
+									<!--header-->
+									<h2 class="bg-info text-light text-center">News</h2>
+								<form>
+									<div class="input-field">
+										<h4 class="m-2">
+										<input type="text" id="searchquery">
+									</h4>
+									</div>
+									
+									<div class="row">
+									   <input type="submit" id="searchbtn" class="btn col m2 s12" value="search">
+									</div>
+									
+								</form>
+								
+								<div id="loader" style="display:none;">
+								  <div class="progress">
+									<div class="indeterminate"></div>
+								  </div>
+								</div>
+								
+								<div class="row">
+								   <div id="newsResults"></div>
+								</div>
+  
 
 
 
