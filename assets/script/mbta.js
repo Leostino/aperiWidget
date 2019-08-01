@@ -47,13 +47,34 @@ $("#orangeBtn").on('click',function(){
                 arriveTime = response.data[0].attributes.departure_time;
 
             }
+
+            function addZero(i) {
+                if (i < 10) {
+                  i = "0" + i;
+                }
+                return i;
+              }
+              
+              function time() {
+                var d = new Date(arriveTime);
+                var h = addZero(d.getHours());
+                var m = addZero(d.getMinutes());
+                var s = addZero(d.getSeconds());
+                $("#arrivingDisplay").html(h + ":" + m + ":" + s);
+                
+              }
+
+              time();
+
+              
+                
             let rt = new Date(arriveTime);
             //arriveTime = new Date(arriveTime);
             //display time of arrival 
 
 
             console.log(arriveTime);
-            $("#arrivingDisplay").html(rt.getTime());
+            
 
             
            
