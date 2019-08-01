@@ -71,6 +71,7 @@
 				</div>
 				<!--End of weather wrapper-->
 			</aside>
+			
 
 			<!--Right side widgets-->
 			<section class="col-sm-6 ml-auto mr-auto p-0  ">
@@ -126,6 +127,7 @@
 
 
 				</div>
+				
 
 		<!-- news section -->
 <div class="container">
@@ -162,6 +164,38 @@
    </div>
 
 			</section>
+			<!--stocks widget wrapper-->
+			<aside class="col-sm-5">
+				<!--Stocks -->
+				<div class="card shadow bg-white rounded ml-auto mb-3">
+					<!--Header-->
+					<h2 class="bg-info text-light text-center ">Stocks</h2>
+
+					<!--input and seach btn-->
+					<div>
+						<input class=" mt-2 mb-2 ml-5" type="text" value="" placeholder="Company symbol ..." id="searchSymbol">
+						<h3 id="buttonStocks" class=" btn btn-success mt-1 ml-1 "><i class="far fa-money-bill-alt"> Search</i></h3>
+						<hr class="ml-4 mr-4">
+					</div>
+					<!--Company name display-->
+					<div class="row m-4">
+						<span class="col-6 m-1 ml-4">
+							<h4 class="ml-2" id="companyName"></h4>
+							<!--logo display-->
+							<img class="ml-3" alt="CompanyLogo" id="logo" src="" style="height: 100px; width: 100px;"/>
+					
+						</span>
+						<!--temp display-->
+						<span class="col-4 justify-contents-center mr-1">
+							<h5 class="mt-5 display-4" id="livePrice"></h5>
+							<h6 id="peRatio"></h6>
+							<h6 id="mktCap"></h6>
+						</span>
+
+					</div>
+				</div>
+				<!--End of stocks wrapper-->
+			</aside>
 
 
 
@@ -181,6 +215,8 @@
 	<script src="assets/script/aperi.js"></script>
 	<!-- news js -->
 	<script src="assets/script/news.js"></script>
+	<!--Stocks-->
+	<script src="assets/script/stocks.js"></script>
 </body>
 
 </html>
