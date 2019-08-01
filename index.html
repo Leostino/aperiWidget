@@ -128,21 +128,38 @@
 				</div>
 
 		<!-- news section -->
-		<div class="card shadow">
-		<aside class="col-sm-5">
-			<div class="card shadow bg-white rounded ml-auto mb-3">
-				<!--Header-->
-					<h2 class="bg-info text-light text-center">News</h2>
+<div class="container">
+      	<h2 class="bg-info text-light text-center">News</h2>
+      <h3 class="center" style="margin-bottom:20px;"></h3>
+      
+      <form>
+          <div class="input-field">
+              <i class="material-icons prefix">public</i>
+              <input type="text" id="searchquery">
+          </div>
+          
+          <div class="row">
+             <input type="submit" id="searchbtn" class="btn col m2 s12" value="search">
+             <input type="reset" id="searchbtn" class="btn col m2 s12 red right" value="clear"  style="margin-top:3px;">
+          </div>
+          
+      </form>
+      
+      <div id="loader" style="display:none;">
+        <div class="progress">
+          <div class="indeterminate"></div>
+        </div>
+      </div>
+      
+      <div class="row">
+         <div id="newsResults"></div>
+      </div>
+     
+      
 
-				<!--placeholder - for now until articles show-->
-				<div class="articles">
-					<input class=" mt-2 mb-2 ml-5" type="text" value="" placeholder="news" id="articles">
-					<hr class="ml-4 mr-4">
-				</div>
 
-</div>
-</div>
-
+      
+   </div>
 
 			</section>
 
