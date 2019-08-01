@@ -1,4 +1,4 @@
-var name=$("#yourName").val();
+var name = $("#yourName").val();
 
 
 $(document).ready(function() {
