@@ -72,54 +72,48 @@
 			</aside>
 
 			<!--Right side widgets-->
-			<section class="col-sm-6 ml-auto mr-auto p-0  ">
+			<section class="col-sm-6 ml-auto p-0  ">
 
 
 				<div class="card shadow">
 					<!--header-->
-					<h2 class="bg-info text-light text-center">MBTA</h2>
+					<h2 class="card-title bg-info text-light text-center">MBTA</h2>
 					<!--Wrap inside the card -->
-					<di class="row pl-5">
+					<di class="row pl-5 " >
 						<!--Trains lines-->
 						<div class="col-6 justify-content-center">
 							<h4 class="m-2">Trains Lines</h4>
 							<hr class="ml-2">
-							<h5 class="m-2 bg-warning text-light pl-2">Orange</h5>
-							<h5 class="m-2 bg-danger text-light pl-2">Red</h5>
-							<h5 class="m-2 bg-success text-light pl-2">Green</h5>
-
+							<ul class="list-group list-group-flush">
+									<li class="list-group-item m-2 bg-warning text-light" id="orangeBtn"><h3>Orange</h3></li>
+									<li class="list-group-item m-2 bg-danger text-light"><h3>Red</h3></li>
+									<li class="list-group-item m-2 bg-success text-light"><h3>Green</h3></li>
+							</ul>
 
 						</div>
 						<!--Train station-->
-						<div class="co-lg-6 ml-5 no-gutters">
+						<div class="co-lg-6 ml-4 no-gutters">
 							<h4 class="m-2">Stations</h4>
 							<hr class="">
-							<select>
-								<option value="volvo">Station-1</option>
-								<option value="saab">Station-2</option>
-								<option value="opel">Station-3</option>
-								<option value="audi">Station-4</option>
+							<select id="stationSelector">
+								<option value="#">Choose Line...</option>
 							</select>
-
-						</div>
-						<div class="col">
-							<div class="col">
-								<h4 class="m-2">Inbound arrival:</h4>
-								<h5 class="m-2">arriving in 15 min</h5>
-
+							<!--direction -->
+							<select id="directionSelector">
+								<option id="directionOpt" value="1">Inbound</option>
+								<option id="directionOpt" value="0">Outbound</option>
+								
+							</select>
+							
+							<!--search btn-->
+							<div class="col justify-content-center text-center">
+									<h3 id="mbtaBtn" class=" btn btn-success mt-5 "><i class="far fa-clock"> Search</i></h3>
+									<h4 class="m-2 mr-auto"id="arringText"> Time to next :</h4>
+									<h5 class="m-2 display-4"id="arrivingDisplay">00:00</h5>
 							</div>
 
 						</div>
-						<div class="col-lg">
-							<div class="col">
-								<h4 class="m-2">Inbound arrival</h4>
-								<h5 class="m-2">arriving in 15 min</h5>
-
-							</div>
-
-						</div>
-
-
+					
 					</di>
 
 
@@ -142,13 +136,13 @@
 	</main>
 
 	<!--Jquery CDN-->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<!--weather js-->
 	<script src="assets/script/index.js"> </script>
 	<!--MBTA-->
 	<script src="assets/script/mbta.js"></script>
 	<!--General App-->
-	<script src="assets/script/aperi.js"></script>
+	<!--<script src="assets/script/aperi.js"></script>-->
 </body>
 
 </html>

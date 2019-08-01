@@ -1,44 +1,60 @@
 const mbtaAppKey = 'dee7e1e039704d419640b45a7c2cdf23';
+let seachroute = "";
 
-let queryRoutesURL ="https://api-v3.mbta.com/routes/?fields%5Broute%5D=short_name,long_name"+mbtaAppKey;
-    console.log("MBTA :"+queryRoutesURL);
-$.ajax({
-    url: queryRoutesURL,
-    method:"GET"
-}).done(function(response){
-    for (var i = 0;i<10;i++){
-        let lines = response.data[i].relationships.line.data.id;
-        console.log("Routes"+response.data[i].relationships.line.data);
-        $("#mbtaTest").append("<p>"+lines+"</p>");
-      }
+var searchDirection = 1;
+
+//RoutesURL ="https://api-v3.mbta.com/trips/?filter%5Broute%5D=CR-Providence&include=shape&fields%5Btrip%5D=name&fields%5Bshape%5D=name"//?filter[stop]=place-knncl";
+//ScheduleUrl = "https://api-v3.mbta.com/schedules?filter[route]="+seachroute+"&filter[stop]="+searchStation+"&direction_id="+searchDirection;
+//PredictionUrl = "https://api-v3.mbta.com/predictions?filter[route]="+seachroute+"&filter[stop]="+searchStation+"&direction_id="+searchDirection;
+
+//onclick events
+$("#orangeBtn").on('click',function(){
+    seachroute = "";
     
+    $("#stationSelector").html("");
+    $("#stationSelector").append("<option id='selectorOpt' value='choose'>Choose</option>");
+    $("#stationSelector").append("<option id='selectorOpt' value='place-ogmnl'>Oak Grove</option>");
+    $("#stationSelector").append("<option id='selectorOpt' value='place-mlmnl'>Malden Center</option>");
+    $("#stationSelector").append("<option id='selectorOpt' value='place-welln'>Wellington</option>");
+    var searchStation ='';
+    //assign selec chosen value to searchStation
+    $("select#stationSelector").change(function(){
+        console.log("changed");
+       return searchStation = $(this).children("option:selected").val();
+        
+    });
+    //assign selec chosen value to searchStation
+    $("select#directionSelector").change(function(){
+        console.log("changed");
+       return searchDirection = $(this).children("option:selected").val();
+        
+    });
+    //click event
+    $("#mbtaBtn").on('click',function(){
+        console.log("clicked");
+         
+        let queryScheduleUrl = "https://api-v3.mbta.com/predictions?filter[route]="+seachroute+"&filter[stop]="+searchStation+"&direction_id="+searchDirection;
+        $.ajax({
+            url: queryScheduleUrl,
+            method:"GET"
+        }).done(function(response){
+            console.log(response.data[0]);
+            
+            //let arriveTime = response.data[0].attributes.arrival_time;
+            var arriveTime = response.data[0].attributes.arrival_time;
+            //if null is be outbound
+            if (!arriveTime){
+                arriveTime = response.data[0].attributes.departure_time;
 
-})
-let queryAlertsUrl = "https://api-v3.mbta.com/alerts?filter[stop]=place-knncl";
-$.ajax({
-    url: queryAlertsUrl,
-    method:"GET"
-}).done(function(response){
-    for (var i = 0;i<10;i++){
-        let lines = response.data[i];
-        console.log("Alerts :"+response.data[i]);
-        $("#mbtaTest").append("<p>"+lines+"</p>");
-      }
-    
+            }
+            arriveTime = arriveTime.substr(arriveTime.length - 5);
+            //display time of arrival 
+            console.log(arriveTime);
+            $("#arrivingDisplay").html(arriveTime);
 
-})
+            
+           
+        })
 
-let queryPredictionUrl = "https://api-v3.mbta.com/predictions?filter[stop]=place-knncl";
-$.ajax({
-    url: queryPredictionUrl,
-    method:"GET"
-}).done(function(response){
-    for (var i = 0;i<10;i++){
-        let arrivalTime = response.data[i].attributes.arrival_time;
-        let arrivalLocation = response.data[i].relationships.trip.data.id
-        console.log(response.data[i].attributes);
-        $("#mbtaTest").append("<p> Arrival Time: "+arrivalTime+" at "+arrivalLocation+"</p>");
-      }
-    
-
+    })
 })
