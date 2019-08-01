@@ -1,4 +1,6 @@
-var name = $("#yourName").val();
+
+ let name = $("#yourName").val();
+
 
 
 $(document).ready(function() {
@@ -9,8 +11,16 @@ $(document).ready(function() {
 
 
     $("#buttonStart").on("click", function() {
-        $("header").show();
-        $("article").show();
-        $("#helloMessage").hide();
-        $("#userNameHeader").html("Hello, "+ name);
+        name=$("#yourName").val();
+        if (name.length===0){
+            $("#emptyName").text("Please enter your name");
+        }
+        else{
+            $("header").show();
+            $("article").show();
+            $("#helloMessage").hide();
+            $("#userNameHeader").html("Hello, "+ name);
+        }
+        
+    
     });
