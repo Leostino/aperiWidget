@@ -103,7 +103,7 @@ $("#orangeBtn").on('click',function(){
 
                 // display arrival time (mins & secs)
 
-                    $("#arrivingDisplay").html(ArrivalMin + ":" + ArrivalSec);                
+                    $("#arrivingDisplay").html(ArrivalMin + " min. " + ArrivalSec+" sec.");                
                 
               }     
 
