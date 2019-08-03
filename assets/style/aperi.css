@@ -1,5 +1,5 @@
 :root{
-   --border-color: gray;
+   --border-color: rgb(72, 70, 70);
    --primary-color-1: #2F7164;	/*Primary colors for app - Rodrigo*/
    --primary-color-2: #7AA79E;
    --primary-color-3: #4F8A7F;
@@ -182,7 +182,13 @@ header{
     width: 100vw;
     
   }
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 600px) {
+     #newsDisplay{
+      padding: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100vw;
+     }
      #weatherCSS{
         margin-left:0px;
         margin-right: 15px;
@@ -203,7 +209,7 @@ header{
         width: 100%;
      }
  
- 
+
  }
  #liveprice{
   color: green;
