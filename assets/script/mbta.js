@@ -48,36 +48,64 @@ $("#orangeBtn").on('click',function(){
 
             }
 
+            // addZero() to add zero to time when its less than 10 eg. 9 sec will
+
             function addZero(i) {
                 if (i < 10) {
                   i = "0" + i;
                 }
                 return i;
               }
-              
-              function time() {
-                var d = new Date(arriveTime);
-                var h = addZero(d.getHours());
-                var m = addZero(d.getMinutes());
-                var s = addZero(d.getSeconds());
-                $("#arrivingDisplay").html(h + ":" + m + ":" + s);
-                
-              }
 
               time();
-
               
+              // function to convert time from milliseconds to local time
+              
+              function time() {
+
+                // passing the arrival time from api into the new date obj
+                let d = new Date(arriveTime);
+
+                // passed arrival time obj into the addZero() to add zero if the time is less than 10 eg. 9 will be 09
+
+                let h = addZero(d.getHours());
+                let m = addZero(d.getMinutes());
+                let s = addZero(d.getSeconds());
+
+                // getting the current time in minutes and seconds **hours not needed because we want to display mins & secs
+
+                let timeNowMin =  addZero(new Date().getMinutes());
+                let timeNowSec =  addZero(new Date().getSeconds());
+
+                // print the current minutes and seconds to console
+
+                console.log(timeNowMin);
+                console.log(timeNowSec);
+
+                // subtraction => api's train arrival time - time now = time remaining to next train in mins & secs
+
+                let ArrivalMin = m - timeNowMin;
+                let ArrivalSec = s - timeNowSec;
+
+                // if statement to add "0" to secs when less than 10 eg. 09, also makes sure time returns positive integer
+            
+                 if((ArrivalSec >= 0) && (ArrivalSec < 10)) {
+                    ArrivalSec = "0"+ ArrivalSec;
+                }else if(ArrivalSec < 0) {
+                    ArrivalSec *= -1;
+                }
+
+                // print mins & secs to next train in console
+
+                    console.log(ArrivalMin);
+                    console.log(ArrivalSec);             
+
+                // display arrival time (mins & secs)
+
+                    $("#arrivingDisplay").html(ArrivalMin + ":" + ArrivalSec);                
                 
-            let rt = new Date(arriveTime);
-            //arriveTime = new Date(arriveTime);
-            //display time of arrival 
+              }     
 
-
-            console.log(arriveTime);
-            
-
-            
-           
         })
 
     })
