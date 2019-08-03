@@ -68,4 +68,142 @@ header{
 
  #icon{
   margin-left: 100px;
+ }@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap');
+ :root{
+    
+    --border-color: gray;
+    --primary-color-1: #2F7164;	/*Primary colors for app - Rodrigo*/
+    --primary-color-2: #7AA79E;
+    --primary-color-3: #4F8A7F;
+    --primary-color-4: #1A5C4F;
  }
+ /**
+  * index.scss
+  * - Add any styles you want here!
+  */
+  *
+  {
+    font-family: 'Archivo Narrow', sans-serif;
+    margin:0;
+    padding:0;
+  }
+  ul{
+    list-style-type: none;
+  }
+  
+  body {
+    background: #2B3E50;
+  }
+  .fc{
+    background: rgb(70, 102, 131); 
+    max-width: 1280px;
+    margin: 0 auto 0 auto;
+  }
+  .fc > * { 
+    padding: 0px;   
+  }
+  
+  /* initialize flexbox container and flexbox items */
+  .fc { 
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .fc > * { 
+    flex: 1; 
+  }
+  
+  /* header and footer should be full width */
+  
+  .fc header,
+  .fc footer {
+    background-color: #343a40;  
+    flex: 0 1 100vw; 
+  }
+          
+  /* ensure flex-container is always at least as tall as the viewport. 
+     Keeps footer from coming up*/
+  .fc { min-height: 100vh; }
+  /* ensure flex-container is always at least as tall as the viewport, 
+     minus the height of the header and footer combined. 
+  */
+  .fc { min-height: calc(100vh - 200px); } 
+  
+  .fc main{
+    flex: 0 1 100vw;
+      text-align: center;
+      max-height: auto;
+      min-width: 250px;
+      max-width: 100%;   
+  }
+  
+  
+  .fc aside{
+      width: auto;
+      text-align: center;
+      max-width: auto;
+      min-height: 250px;
+      min-width: 250px;
+  }
+     
+  .fc section{
+      text-align: center;
+      max-width: auto;
+      min-width: 250px;
+      
+  }
+  .fc #stocksDisplay{
+    padding: 0;
+    flex: 0 1 100vw;
+ 
+  }
+  .fc #newsDisplay{
+    padding: 0;
+    flex: 0 1 100vw;
+ 
+  }
+  #helloMessage{
+    padding: 0;
+    flex: 0 1 100vw;
+    display:flex;
+    align-items: center;
+   justify-content: center;
+    margin-right: auto;
+ 
+  }
+  /* size header and footer to be full width each */
+  header,
+  footer {
+    text-align: center;
+    box-sizing: border-box;
+    width: 100vw;
+    
+  }
+  @media screen and (max-width: 650px) {
+     #weatherCSS{
+        margin-left:0px;
+        margin-right: 15px;
+        width: 100vw;
+     }
+     #mbtaCSS{
+       padding: 0;
+       margin-left: 0;
+       margin-right: 15px;
+       width: 100vw;
+    }
+     section{
+        margin: 0;
+        width: 100%;
+     }
+     aside{
+        margin: 0;
+        width: 100%;
+     }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ }
+ 
