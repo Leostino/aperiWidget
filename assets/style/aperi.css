@@ -81,6 +81,10 @@ header{
   * index.scss
   * - Add any styles you want here!
   */
+
+
+
+
   *
   {
     font-family: 'Archivo Narrow', sans-serif;
@@ -200,10 +204,27 @@ header{
      }
  
  
- 
- 
- 
- 
- 
  }
+ #liveprice{
+  color: green;
+  /*font-size: 2em;*/
+}
+
+.ct-series-a .ct-point {
+  /* Colour of your points */
+  stroke: red;
+  /* Size of your points */
+  stroke-width: 5px;
+  /* Make your points appear as squares */
+  stroke-linecap: square;
+}
+
+
+.ct-series-a .ct-line {
+  /* Set the colour of this series line */
+  stroke: red;
+  /* Control the thikness of your lines */
+  stroke-width: 2px;
+  
+}
  
