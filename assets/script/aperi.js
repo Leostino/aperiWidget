@@ -5,8 +5,8 @@
 
 $(document).ready(function() {
     $("header").hide();
-    $("article").hide();
-
+    $("section").hide();
+    $("aside").hide();
     });
 
 
@@ -16,9 +16,11 @@ $(document).ready(function() {
             $("#emptyName").text("Please enter your name");
         }
         else{
-            $("header").show();
-            $("article").show();
-            $("#helloMessage").hide();
+            $("header").show('slow');
+            $("section").show('slow');
+            $("header").show('slow');
+            $("aside").show('slow');
+            $("#helloMessage").hide('slow');
             $("#userNameHeader").html("Hello, "+ name);
         }
         
