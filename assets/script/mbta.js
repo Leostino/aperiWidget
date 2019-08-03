@@ -64,6 +64,7 @@ $("#orangeBtn").on('click',function(){
               function time() {
 
                 // passing the arrival time from api into the new date obj
+
                 let d = new Date(arriveTime);
 
                 // passed arrival time obj into the addZero() to add zero if the time is less than 10 eg. 9 will be 09
@@ -72,8 +73,8 @@ $("#orangeBtn").on('click',function(){
                 let m = addZero(d.getMinutes());
                 let s = addZero(d.getSeconds());
 
-                // getting the current time in minutes and seconds **hours not needed because we want to display mins & secs
-
+                // getting the current time in minutes and seconds ***hours not needed because we want to display mins & secs
+             
                 let timeNowMin =  addZero(new Date().getMinutes());
                 let timeNowSec =  addZero(new Date().getSeconds());
 
@@ -87,7 +88,7 @@ $("#orangeBtn").on('click',function(){
                 let ArrivalMin = m - timeNowMin;
                 let ArrivalSec = s - timeNowSec;
 
-                // if statement to add "0" to secs when less than 10 eg. 09, also makes sure time returns positive integer
+                // if statement to add "0" to secs if less than 10 eg. 09, also makes sure time returns positive integer
             
                  if((ArrivalSec >= 0) && (ArrivalSec < 10)) {
                     ArrivalSec = "0"+ ArrivalSec;
