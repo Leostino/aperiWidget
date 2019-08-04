@@ -2,7 +2,7 @@
 
 $(document).ready(function() {
 //api from newsapi.org
-  let newsUrl = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=750e76d88d5b4f5080959f48214d60d4";
+  let newsUrl = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=750e76d88d5b4f5080959f48214d60d4" +"&limit=3";
   
   $.ajax({
      url: newsUrl,
@@ -22,7 +22,7 @@ $(document).ready(function() {
            <div class="card-content">
               <h6>${latestNews[i].title}</h6>
               <div class="card-reveal">
-                 <p>${latestNews[i].description} </p>
+                 <p>${latestNews[i].description}</p>
               </div>
               <div class="card-action">
               <a href="${latestNews[i].url}" target="_blank"> Read More </a>
