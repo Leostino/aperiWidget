@@ -42,7 +42,7 @@
 		<aside id="weatherCSS" class="weather" > 
 				<div class="weather shadow bg-light rounded border-0 mr-5 ml-5 mt-5 mb-3">
 						<!--Header-->
-						<h2 class="bg-dark text-light  text-center rounded-top ">Weather</h2>
+						<h2 class="bg-dark text-light  text-center rounded-top "><i class="fas fa-cloud-sun"></i> Weather</h2>
 	
 						<!--input and seach btn-->
 						<div class="">
@@ -74,7 +74,7 @@
 		<section  class="border border-0 rounded p-0" >
 				<div id="mbtaCSS" class="shadow boder border-0 bg-light mt-5 ml-2 mr-5 mb-5 p-0 rounded">
 						<!--header-->
-						<h2 class="bg-dark border border-dark text-light text-center m-0 p-0 rounded-top">MBTA</h2>
+						<h2 class="bg-dark border border-dark text-light text-center m-0 p-0 rounded-top"><i class="fas fa-subway"></i> MBTA</h2>
 						<!--Wrap inside the section -->
 						<div class="row pl-2 mt-1" >
 							<!--Trains lines-->
@@ -120,13 +120,15 @@
 		</section>
 		<!--News-->
 		<section id="newsDisplay" class="shadow ml-5 mr-5 mb-4 bg-light  rounded"> 
-				<h2 class="bg-dark text-light text-center rounded-top">News</h2>
+				<h2 class="bg-dark text-light text-center rounded-top"><i class="fas fa-newspaper"></i> News</h2>
 				<h3 class="center" style="margin-bottom:20px;"></h3>
 				<!--News display-->
-
-			    <div class="row">
-					<div id="newsResults"></div>
+				<div class="d-flex">
+					<div class="d-flex m-2 ml-auto mr-3 clearfix" id="newsResults"></div>
+					
 				</div>
+			    
+				
 	
 		
 				
@@ -136,7 +138,7 @@
 			<!--Stocks -->
 			<section id="stocksDisplay" class="shadow text-center bg-light ml-5 mr-5 mb-3 border-0 rounded">
 					<!--Header-->
-					<h2 class="bg-dark text-center text-light rounded-top border-0 ">Stocks</h2>
+					<h2 class="bg-dark text-center text-light rounded-top border-0 "><i class="fas fa-chart-line"></i> Stocks</h2>
 
 					<!--input and seach btn-->
 					<div class="">
@@ -146,32 +148,33 @@
 					</div>
 					<!--Company name display-->
 					<div class="d-flex m-4">
-						<div class="col-6 m-1 ml-4">
+						<div class="m-1 ml-4">
 							<h4 class="ml-2" id="companyName"></h4>
 							<!--logo display-->
 
 							<img class="ml-3" alt="" id="logo" src=""/>
 							<span class="justify-contents-center mr-1">
-
+									<!--Price display-->
 									<h5 class="mt-5 display-4" id="livePrice"></h5>
 									<h6 id="peRatio"></h6>
 									<h6 id="mktCap"></h6>
-							</div>
-							<div class="ct-chart ct-perfect-fourth">
-								<h1></h1>
-							</div>
+									
+							</span>
+							<!--Graph display-->
+							
 						</div>
-						<!--Price display-->
-						
+						<div class="ct-chart ct-perfect-fourthbr" style="width:800px;max-height: 400px; "></div>	
 						
 					</div>
+						
+				</section>	
+				<!--footer-->
+		  		<footer class="bg-dark text-light"><p>Aperi Widget 2019 &copy;</p></footer>	
+	<!--end of wraper-->		
+	</div>
 					
-				</section>
+				
 		
-		<!--footer-->
-		  <footer class="bg-dark text-light"><p>Aperi Widget 2019 &copy;</p></footer>
-	  <!--Wrapper ends-->
-	  </div>
 	  
 		  
 	  
