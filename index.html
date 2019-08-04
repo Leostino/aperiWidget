@@ -18,26 +18,26 @@
 	<title>Aperi Widget</title>
 </head>
 
-<body class="">
+<body class="bg-secondary">
 	<!--Wrapper-->
     <div class="fc">
 		<!--header-->
 		<header class ="border  border-dark border-top-0 border-left-0 border-right-0 ">
-				<p class="display-1" id="userNameHeader"></p>
+				<p class="display-1 text-light" id="userNameHeader"></p>
 		</header>
 		<!--First container to show-->
-		<section class="" id="helloMessage">
+		<div class="" id="helloMessage">
 				
 				<form class="jumbotron mt-5 col-6 justify-content-center shadow p-3 mb-5 text-center rounded">
 						<h2 class="row justify-content-center">Welcome!</h2>
 						<h3 class="row justify-content-center">Enter your name: </h3>
 						<span class="row justify-content-center">
-							<input type="text" class="col-6 m-1" id="yourName" placeholder="Your Name...">
+							<input type="text" class="col-6 m-1" id="yourName" placeholder="Your Name..."required autofocus>
 							<h1 class="col-4 btn btn-success m-1" id="buttonStart"><i class="fas fa-sign-in-alt">Enter</i></h1>
 							<p id="emptyName"></p>
 						</span>
 				</form>
-		</section>
+			</div>
 		<!--weather App-->
 		<aside id="weatherCSS" class="weather" > 
 				<div class="weather shadow bg-light rounded border-0 mr-5 ml-5 mt-5 mb-3">
@@ -81,7 +81,7 @@
 							<div class="col-6 justify-content-center">
 								<h4 class="m-2">Train Lines</h4>
 								<hr class="ml-2">
-								<ul class="list-group list-group-flush">
+								<ul class="list-group list-group-flush p-1">
 										<li class="btn-sm  m-1 bg-warning text-light" id="orangeBtn"><h3>Orange</h3></li>
 										<li class="btn-sm  m-1 bg-danger text-light"><h3>Red</h3></li>
 										<li class="btn-sm  m-1 mb-3	 bg-success text-light"><h3>Green</h3></li>
@@ -119,19 +119,22 @@
 	
 		</section>
 		<!--News-->
-		<section id="newsDisplay" class="shadow ml-5 mr-5 mb-4 bg-light rounded"> 
+		<section id="newsDisplay" class="shadow ml-5 mr-5 mb-4 bg-light  rounded"> 
 				<h2 class="bg-dark text-light text-center rounded-top">News</h2>
 				<h3 class="center" style="margin-bottom:20px;"></h3>
 				<!--News display-->
+
 			    <div class="row">
 					<div id="newsResults"></div>
 				</div>
+	
+		
 				
 		</section>
 		<!--Stocks-->
-		<section id="stocksDisplay">
+		
 			<!--Stocks -->
-			<div class="shadow bg-light ml-5 mr-5 mb-3 border-0 rounded">
+			<section id="stocksDisplay" class="shadow text-center bg-light ml-5 mr-5 mb-3 border-0 rounded">
 					<!--Header-->
 					<h2 class="bg-dark text-center text-light rounded-top border-0 ">Stocks</h2>
 
@@ -143,42 +146,48 @@
 					</div>
 					<!--Company name display-->
 					<div class="d-flex m-4">
-						<span class="col-6 m-1 ml-4">
+						<div class="col-6 m-1 ml-4">
 							<h4 class="ml-2" id="companyName"></h4>
 							<!--logo display-->
-							<img class="ml-3" alt="CompanyLogo" id="logo" src="" style="height: 100px; width: 100px;"/>
+
+							<img class="ml-3" alt="" id="logo" src=""/>
 							<span class="justify-contents-center mr-1">
+
 									<h5 class="mt-5 display-4" id="livePrice"></h5>
 									<h6 id="peRatio"></h6>
 									<h6 id="mktCap"></h6>
-								</span>
-					
-						</span>
+							</div>
+							<div class="ct-chart ct-perfect-fourth">
+								<h1></h1>
+							</div>
+						</div>
 						<!--Price display-->
 						
-						<div class="ct-chart ct-perfect-fourth">
-							<h1>Graph Chart</h1>
-						</div>
+						
 					</div>
-				</div>
-		</section>
+					
+				</section>
+		
 		<!--footer-->
 		  <footer class="bg-dark text-light"><p>Aperi Widget 2019 &copy;</p></footer>
 	  <!--Wrapper ends-->
 	  </div>
+	  
+		  
+	  
 	
 	<!--Chart js library-->
 	<script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
 	<!--Chart CSS-->
-    <link rel="stylesheet" href="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
 	<!--Jquery CDN-->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<!--weather js-->
 	<script src="assets/script/index.js"> </script>
 	<!--MBTA-->
 	<script src="assets/script/mbta.js"></script>
 	<!--General App-->
-		<!--<script src="assets/script/aperi.js"></script>-->
+	<script src="assets/script/aperi.js"></script>
 	<!-- news js -->
 	<script src="assets/script/news.js"></script>
 	<!--Stocks-->
