@@ -6,12 +6,12 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<!--font Awesome-->
 	<script src="https://kit.fontawesome.com/ba12d81664.js"></script>
-	<!--CSS-->
-	<link rel="stylesheet" type="text/css" media="screen" href="assets/style/aperi.css">
 	<!--Bootstrap-->
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<!--<link rel="stylesheet" type="text/css" href="/assets/style/bootstrap.min.css">-->
+	<!--CSS-->
+	<link rel="stylesheet" type="text/css" media="screen" href="assets/style/aperi.css">
+		<!--<link rel="stylesheet" type="text/css" href="/assets/style/bootstrap.min.css">-->
 	 <!-- jQuery library -->
 	 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -26,7 +26,7 @@
 				<p class="display-1 text-light" id="userNameHeader"></p>
 		</header>
 		<!--First container to show-->
-		<div class="" id="helloMessage">
+		<div class="align-items-center " id="helloMessage">
 				
 				<form class="jumbotron mt-5 col-6 justify-content-center shadow p-3 mb-5 text-center rounded">
 						<h2 class="row justify-content-center">Welcome!</h2>
@@ -37,9 +37,9 @@
 							<p id="emptyName"></p>
 						</span>
 				</form>
-			</div>
+		</div>
 		<!--weather App-->
-		<aside id="weatherCSS" class="weather" > 
+			<aside id="weatherCSS" class="weather" > 
 				<div class="weather shadow bg-light rounded border-0 mr-5 ml-5 mt-5 mb-3">
 						<!--Header-->
 						<h2 class="bg-dark text-light  text-center rounded-top ">Weather</h2>
@@ -69,16 +69,16 @@
 						</div>
 					</div>
 					<!--End of weather wrapper-->
-		</aside>
+			</aside>
 		<!--MBTA-->
-		<section  class="border border-0 rounded p-0" >
-				<div id="mbtaCSS" class="shadow boder border-0 bg-light mt-5 ml-2 mr-5 mb-5 p-0 rounded">
+			<section  class="border border-0 rounded p-0" >
+				<div id="mbtaCSS" class="shadow boder border-0 bg-light mt-5 ml-2 mr-5 mb-5  rounded">
 						<!--header-->
 						<h2 class="bg-dark border border-dark text-light text-center m-0 p-0 rounded-top">MBTA</h2>
 						<!--Wrap inside the section -->
-						<div class="row pl-2 mt-1" >
+						<div class="row pl-2 mt-1 pr-3" >
 							<!--Trains lines-->
-							<div class="col-6 justify-content-center">
+							<section id="trainCSS" class="col-6 justify-content-center">
 								<h4 class="m-2">Train Lines</h4>
 								<hr class="ml-2">
 								<ul class="list-group list-group-flush p-1">
@@ -87,9 +87,9 @@
 										<li class="btn-sm  m-1 mb-3	 bg-success text-light"><h3>Green</h3></li>
 								</ul>
 	
-							</div>
+							</section>
 							<!--Train station-->
-							<div class="co-lg-6 ml-4 no-gutters">
+							<section id="stationCSS"  class="co-lg-6 ml-4 no-gutters pr-1">
 								<h4 class="m-2">Stations</h4>
 								<hr class="">
 								<select id="stationSelector">
@@ -109,17 +109,17 @@
 										<h2 class="m-2"id="arrivingDisplay">00:00</h2>
 								</div>
 	
-							</div>
+							</section>
 						
 						</di>
 	
 	
 	
-					</div>
+				</div>
 	
-		</section>
+			</section>
 		<!--News-->
-		<section id="newsDisplay" class="shadow ml-5 mr-5 mb-4 bg-light  rounded"> 
+			<section id="newsDisplay" class="shadow ml-5 mr-5 mb-4 bg-light  rounded"> 
 				<h2 class="bg-dark text-light text-center rounded-top">News</h2>
 				<h3 class="center" style="margin-bottom:20px;"></h3>
 				<!--News display-->
@@ -132,10 +132,10 @@
 						<h4>Title2</h4>
 						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus soluta architecto aperiam iusto, laboriosam nam iure maiores officiis non sequi. Nostrum accusantium sed, tenetur voluptatibus distinctio amet rerum quaerat ut.</p>
 	
-					</div>
+				</div>
 				
-		</section>
-		<!--Stocks-->
+			</section>
+		
 		
 			<!--Stocks -->
 			<section id="stocksDisplay" class="shadow text-center bg-light ml-5 mr-5 mb-3 border-0 rounded">
@@ -160,26 +160,20 @@
 									<h5 class="mt-5 display-4" id="livePrice"></h5>
 									<h6 id="peRatio"></h6>
 									<h6 id="mktCap"></h6>
-							</div>
-							<div class="ct-chart ct-perfect-fourth">
-								<h1></h1>
-							</div>
 						</div>
+						<div class="ct-chart ct-perfect-fourth">
+								
+						</div>
+					</div>
 						<!--Price display-->
 						
-						
-					</div>
-					
-				</section>
-		
+			</section>			
+			
 		<!--footer-->
-		  <footer class="bg-dark text-light"><p>Aperi Widget 2019 &copy;</p></footer>
-	  <!--Wrapper ends-->
-	  </div>
-	  
-		  
-	  
-	
+		<footer class="bg-dark text-light "><p>Aperi Widget 2019 &copy;</p></footer>
+	<!--Wrapper ends-->
+	</div>
+
 	<!--Chart js library-->
 	<script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
 	<!--Chart CSS-->
