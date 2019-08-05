@@ -1,8 +1,12 @@
-// print a string to the console to test the link to index.html
+// ***weather.js is the script for weather api***
+// ***coded by Orlando and Leonard***
+
+// print a string to the console to test the script link in index.html
 
 console.log("hello this is the weather script");
 
 // get Boston's weather forcast
+// coded by Leonard
 
 // Endpoint for Boston's weather assigned to a variable bostonURL
 
@@ -64,24 +68,45 @@ $.ajax({
 
 
 // eventclick function
+// coded by Leonard
+
+// when search button is clicked, call the ajacCall function
 
 $("#search-btn").on('click', ajaxCall)
 
+
+
+
 // enter key function incase the user decides to use the enter key instead of the search button
+// coded by Leonard
+
+// when user uses the enter key instead of search button
 
 $("#search-txt").on('keypress', function (event) {
-  if(event.keyCode === 13){
+
+  // check if the keycode for the pressed key is 13 (keycode for "enter" key)
+
+  if(event.keyCode === 13) {
+
+    // cancel the default action of the keypress eg. navigating to a new page
+
     event.preventDefault();
+
+    // call the ajaxCall() function
+
       ajaxCall();
   }
 })
 
 
+
+
 // create a function for the ajax call
+// coded by Orlando and Leonard
 
 function ajaxCall() {
 
-   //assign user nsearch to a variable
+   // assign user search to a variable searchBox
 
    let searchBox = $("#search-txt").val();
 
@@ -89,10 +114,12 @@ function ajaxCall() {
 
    const appKey = "75713bc434fc1e071e9c80823f391fa7";
 
-   //assing Url + seach string
+   // assign endpoint + seach string to a variable queryRoutesURL
 
    let queryRoutesURL ="https://api.openweathermap.org/data/2.5/weather?q="+searchBox+"&units=imperial&appid="+appKey;
    
+   // print endpoint with user search to console
+
    console.log("weather :"+queryRoutesURL);
    
    //ajax call
@@ -149,7 +176,7 @@ function ajaxCall() {
 
    })
 
-//end of ajaxCall function
+//end of ajax call function
 
 }
 
