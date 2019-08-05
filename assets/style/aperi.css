@@ -48,7 +48,8 @@
     padding: 0px;   
   } 
   /* header and footer should be full width */
-  .fc header,footer {
+  .fc header,
+  footer {
     text-align: center;
     background-color: #343a40;  
     flex: 0 1 100vw; 
@@ -98,16 +99,18 @@
     margin-right: auto;
  
   }
+   /* header and footer should be full width */
+   .fc header,
+   footer {
+     text-align: center;
+     background-color: #343a40;  
+     flex: 0 1 100vw; 
+   }  
+   footer{
+    flex: 0 1 100%;
 
+   }
 
-  /* size header and footer to be full width each */
-  header,
-  footer {
-    text-align: center;
-    box-sizing: border-box;
-    width: 100vw;
-    
-  }
   .card:hover{
     -webkit-animation: shadow-drop-lr 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: shadow-drop-lr 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
