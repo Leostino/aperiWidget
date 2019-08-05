@@ -6,12 +6,13 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<!--font Awesome-->
 	<script src="https://kit.fontawesome.com/ba12d81664.js"></script>
+	<!--CSS-->
+	<link rel="stylesheet" type="text/css" media="screen" href="assets/style/aperi.css">
+		
 	<!--Bootstrap-->
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<!--CSS-->
-	<link rel="stylesheet" type="text/css" media="screen" href="assets/style/aperi.css">
-		<!--<link rel="stylesheet" type="text/css" href="/assets/style/bootstrap.min.css">-->
+	<!--<link rel="stylesheet" type="text/css" href="/assets/style/bootstrap.min.css">-->
 	 <!-- jQuery library -->
 	 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -38,7 +39,7 @@
 						</span>
 				</form>
 		</div>
-		<!--weather App-->
+			<!--weather App-->
 			<aside id="weatherCSS" class="weather" > 
 				<div class="weather shadow bg-light rounded border-0 mr-5 ml-5 mt-5 mb-3">
 						<!--Header-->
@@ -68,9 +69,9 @@
 	
 						</div>
 					</div>
-					<!--End of weather wrapper-->
+			<!--End of weather wraper-->
 			</aside>
-		<!--MBTA-->
+			<!--MBTA-->
 			<section  class="border border-0 rounded p-0" >
 				<div id="mbtaCSS" class="shadow boder border-0 bg-light mt-5 ml-2 mr-5 mb-5  rounded">
 						<!--header-->
@@ -111,7 +112,7 @@
 	
 							</section>
 						
-						</di>
+					</div>
 	
 	
 	
@@ -119,26 +120,14 @@
 	
 			</section>
 		<!--News-->
-
 		<section id="newsDisplay" class="shadow ml-5 mr-5 mb-4 bg-light  rounded"> 
 				<h2 class="bg-dark text-light text-center rounded-top"><i class="fas fa-newspaper"></i> News</h2>
-
-		
-
 				<h3 class="center" style="margin-bottom:20px;"></h3>
 				<!--News display-->
 				<div class="d-flex">
-					<div class="d-flex m-2 ml-auto mr-3 clearfix" id="newsResults"></div>
-					
-				</div>
-			    
-				
-	
-        
-				</div>
-
-				
-			</section>
+					<div class="d-flex m-2 ml-auto mr-3 clearfix" id="newsResults"></div>	
+				</div>	
+		</section>
 		
 		
 			<!--Stocks -->
@@ -153,7 +142,7 @@
 						<hr class="ml-4 mr-4">
 					</div>
 					<!--Company name display-->
-					<div class="d-flex m-4">
+					<div class="m-4">
 						<div class="m-1 ml-4">
 							<h4 class="ml-2" id="companyName"></h4>
 							<!--logo display-->
@@ -164,43 +153,26 @@
 									<h5 class="mt-5 display-4" id="livePrice"></h5>
 									<h6 id="peRatio"></h6>
 									<h6 id="mktCap"></h6>
-
-									
+	
 							</span>
-							<!--Graph display-->
+							
 							
 						</div>
+						<!--Graph display-->
 						<div class="ct-chart ct-perfect-fourthbr" style="width:800px;max-height: 400px; "></div>	
-						
 					</div>
-						
-				</section>	
-				<!--footer-->
-		  		<footer class="bg-dark text-light"><p>Aperi Widget 2019 &copy;</p></footer>	
-	<!--end of wraper-->		
-	</div>
+					
+			</section>	
 					
 				
-		
-	  
-		  
-	  
-	
-
-						</div>
-						<div class="ct-chart ct-perfect-fourth">
-								
-						</div>
-					</div>
-						<!--Price display-->
 						
-			</section>			
-			
-		<!--footer-->
-		<footer class="bg-dark text-light "><p>Aperi Widget 2019 &copy;</p></footer>
-	<!--Wrapper ends-->
+	<!--footer-->
+	
+	<footer class="bg-dark text-light"><p>Aperi Widget 2019 &copy;</p></footer>	
+	<!--end of wraper-->		
 	</div>
 
+					  		
 
 	<!--Chart js library-->
 	<script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
