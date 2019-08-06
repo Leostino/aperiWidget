@@ -94,10 +94,27 @@ $("#orangeBtn").on('click',function(){
                 // if statement to add "0" to secs if less than 10 eg. 09, also makes sure time returns positive integer
             
                  if((ArrivalSec >= 0) && (ArrivalSec < 10)) {
+
                     ArrivalSec = "0"+ ArrivalSec;
-                }else if(ArrivalSec < 0) {
+
+                }else if(Math.sign(ArrivalSec) === -1) {
+
                     ArrivalSec *= -1;
                 }
+
+                // if statement to add "0" to mins if less than 10 eg. 09, also makes sure time returns positive integer
+
+                if((ArrivalMin >= 0) && (ArrivalMin < 10)) {
+
+                    ArrivalMin = "0"+ ArrivalMin;
+
+                }else if(Math.sign(ArrivalMin) === -1) {
+
+                    ArrivalMin *= -1;
+                }
+
+
+                
 
                 // print mins & secs to next train in console
 
@@ -203,10 +220,25 @@ $("#redBtn").on('click',function(){
 
                 // if statement to add "0" to secs if less than 10 eg. 09, also makes sure time returns positive integer
             
-                 if((ArrivalSec >= 0) && (ArrivalSec < 10)) {
+                if((ArrivalSec >= 0) && (ArrivalSec < 10)) {
+
                     ArrivalSec = "0"+ ArrivalSec;
-                }else if(ArrivalSec < 0) {
+
+                }else if(Math.sign(ArrivalSec) === -1) {
+
                     ArrivalSec *= -1;
+                }
+
+
+                // if statement to add "0" to mins if less than 10 eg. 09, also makes sure time returns positive integer
+
+                if((ArrivalMin >= 0) && (ArrivalMin < 10)) {
+
+                    ArrivalMin = "0"+ ArrivalMin;
+
+                }else if(Math.sign(ArrivalMin) === -1) {
+
+                    ArrivalMin *= -1;
                 }
 
                 // print mins & secs to next train in console
@@ -227,7 +259,6 @@ $("#redBtn").on('click',function(){
 
 //green line 
 
-//red line 
 //onclick events
 $("#greenLineBtn").on('click',function(){
     seachroute = "";
@@ -265,9 +296,13 @@ $("#greenLineBtn").on('click',function(){
             console.log(response.data[0]);
             
             //let arriveTime = response.data[0].attributes.arrival_time;
+
             var arriveTime = response.data[0].attributes.arrival_time;
+
             //if null is be outbound
+
             if (!arriveTime){
+
                 arriveTime = response.data[0].attributes.departure_time;
 
             }
@@ -314,10 +349,25 @@ $("#greenLineBtn").on('click',function(){
 
                 // if statement to add "0" to secs if less than 10 eg. 09, also makes sure time returns positive integer
             
-                 if((ArrivalSec >= 0) && (ArrivalSec < 10)) {
+                if((ArrivalSec >= 0) && (ArrivalSec < 10)) {
+
                     ArrivalSec = "0"+ ArrivalSec;
-                }else if(ArrivalSec < 0) {
+
+                }else if(Math.sign(ArrivalSec) === -1) {
+
                     ArrivalSec *= -1;
+                }
+
+                // if statement to add "0" to mins if less than 10 eg. 09, also makes sure time returns positive integer
+
+
+                if((ArrivalMin >= 0) && (ArrivalMin < 10)) {
+
+                    ArrivalMin = "0"+ ArrivalMin;
+
+                }else if(Math.sign(ArrivalMin) === -1) {
+
+                    ArrivalMin *= -1;
                 }
 
                 // print mins & secs to next train in console
