@@ -1,4 +1,4 @@
-//code done by Diana W Lam
+//code done by dwlam8790
 
 $(document).ready(function() {
    //api from newsapi.org
@@ -11,31 +11,23 @@ $(document).ready(function() {
         success: function(news){
            let output = "";
            let latestNews= news.articles;
-     //find the array with for loop 
-           for(var i = 0;i<4;i++){
-              //create card
-              //card img
-              //card cody
-              //card title
-              //card text
+   //find the array with for loop 
+   //orlando crreated card and postions them in the html for img, title, and descriptions
+   //user will be able to open a link to the news in a new tab with th target="_blank"
+           for(var i = 0; i < 4; i++) {
               output +=`
-              
               <div class="card clearfix" style="width: 18rem; display:float;">
-                 <img src="${latestNews[i].urlToImage}" class="card-img-top">
-              
+               <img src="${latestNews[i].urlToImage}" class="card-img-top">
                <div class="card-body">
-                 <title class="card-title">${latestNews[i].title}</title>
-                 
-                    <p class="card-text">${latestNews[i].description}</p>
-                 
-                 
-                 <a href="${latestNews[i].url}" target="_blank"> Read More </a>     
+               <title class="card-title">${latestNews[i].title}</title>
+                    <p class="card-text">${latestNews[i].description}</p> 
+               <a href="${latestNews[i].url}" target="_blank"> Read More </a>     
                </div>    
               </div>
               `;
             //  console.log(latestNews);
            }
-     //if the news will no generate
+     //if the news will not generate
            if(output !== ""){
               $("#newsResults").html(output);
            }
