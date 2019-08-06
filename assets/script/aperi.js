@@ -26,7 +26,7 @@ console.log("hello this is the aperi script");
 
     // footer hide
 
-    $("footer").hide();
+    //$("footer").hide();
 
     // end of function
 

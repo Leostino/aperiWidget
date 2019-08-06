@@ -44,6 +44,9 @@ $.ajax({
 
     let iconUrl = "http://openweathermap.org/img/w/" + response.weather[0].icon + ".png";
 
+    // assign current description to Boston weather 
+    let bostonDescr = response.weather[0].description;
+
    // display Boston's city name, temperature, high temperature and low temperature as default
 
     $("#cityName").html(response.name);
@@ -61,6 +64,10 @@ $.ajax({
     // change height and width of the Boston's weather icon
 
     $("#icon").css({'height': '100px', 'width': '100px'});
+
+    //place description 
+
+    $("#currentDescript").html(bostonDescr);
 
 })
 
