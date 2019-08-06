@@ -22,6 +22,7 @@
     padding:0;
   }
    /* initialize flexbox container and flexbox items */
+   /* fc stand for flex-box */
    .fc { 
     display: flex;
     flex-flow: row wrap;
@@ -106,7 +107,7 @@
      background-color: #343a40;  
      flex: 0 1 100vw; 
    }  
-   footer{
+   .fc footer{
     flex: 0 1 100%;
 
    }
@@ -206,9 +207,10 @@
         width: 100vw;
      }
      #mbtaCSS{
-      width:97%; 
-      margin-left: auto;
-      margin-right: 100px;  
+      width:90%; 
+      margin-left: 50px;
+      margin-right: 50px;
+        
     }
     #mbtaCSS div {
       display:center;
