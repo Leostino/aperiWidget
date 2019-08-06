@@ -94,7 +94,7 @@ function formatNumber(value) {
     
 }
 
-
+// source https://gionkunz.github.io/chartist-js/index.html
 // function to plot the chart, it expects two values, labels and series of data to plot
 function plotChart(lab, ser){
 //data object containing labels and series
