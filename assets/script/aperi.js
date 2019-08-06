@@ -24,6 +24,10 @@ console.log("hello this is the aperi script");
 
     $("aside").hide();
 
+    // footer hide
+
+    $("footer").hide();
+
     // end of function
 
 });
@@ -69,6 +73,10 @@ console.log("hello this is the aperi script");
             // show aside slowly
 
             $("aside").show('slow');
+
+            // show footer slowly
+
+            $("footer").show('slow');
 
             // hide prompt for user's name slowly
 
